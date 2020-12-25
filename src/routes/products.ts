@@ -1,6 +1,6 @@
 import * as express from "express";
 
-import { getProduct } from "./controller/products";
+import { getProduct, getProductAll } from "./controller/products";
 
 const router: express.Router = express.Router();
 
@@ -22,6 +22,27 @@ const router: express.Router = express.Router();
  *       price:
  *         type: "number"
  *         example: 5300
+ *       name_eng:
+ *         type: "string"
+ *         example: "Nitro Vanilla Cream"
+ *       kcal:
+ *         type: "string"
+ *         example: "75"
+ *       protein:
+ *         type: "string"
+ *         example: "1"
+ *       sat_fat:
+ *         type: "string"
+ *         example: "2"
+ *       sodium:
+ *         type: "string"
+ *         example: "20"
+ *       sugars:
+ *         type: "string"
+ *         example: "10"
+ *       caffeine:
+ *         type: "string"
+ *         example: "245"
  */
 /**
  * @swagger
@@ -63,9 +84,7 @@ const router: express.Router = express.Router();
  *         description: "Product Data"
  */
 
-router.get("/", (req, res, next) => {
-  res.send("respond with a resource");
-});
+router.get("/", getProductAll);
 
 router.get("/:productId", getProduct);
 

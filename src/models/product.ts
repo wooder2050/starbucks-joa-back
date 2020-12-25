@@ -14,6 +14,27 @@ const productSchema: mongoose.Schema = new mongoose.Schema({
   price: {
     type: Number,
   },
+  name_eng: {
+    type: String,
+  },
+  kcal: {
+    type: String,
+  },
+  protein: {
+    type: String,
+  },
+  sat_fat: {
+    type: String,
+  },
+  sodium: {
+    type: String,
+  },
+  sugars: {
+    type: String,
+  },
+  caffeine: {
+    type: String,
+  },
 });
 
 const Product = mongoose.model<IProductModel>("Product", productSchema);
