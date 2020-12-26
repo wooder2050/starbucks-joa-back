@@ -9,7 +9,15 @@ export const getProductAll = async (
   next: express.NextFunction
 ) => {
   try {
-    const product = await Product.find({});
+    let product;
+    if (req.query.size && req.query.page) {
+      const { size, page } = req.query;
+      product = await Product.find({})
+        .skip((+page - 1) * +size)
+        .limit(+size);
+    } else {
+      product = await Product.find({}).limit(10);
+    }
     res.status(200).json({ product });
   } catch (e) {
     next();
