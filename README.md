@@ -36,6 +36,7 @@ DB products Schema example
   sodium: "20",
   sugars: "10",
   caffeine:"245"
+  category: "콜드 브루"
 }
 </pre>
 
@@ -72,6 +73,7 @@ doc 주소: http://localhost:500/docs
         sodium: "20",
         sugars: "10",
         caffeine: "245",
+        category:"콜드 브루"
       },
     ],
   };
@@ -96,6 +98,7 @@ doc 주소: http://localhost:500/docs
     sodium: "20",
     sugars: "10",
     caffeine: "245",
+    category:"콜드 브루"
   },
 };
   </pre>

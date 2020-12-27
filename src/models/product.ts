@@ -47,6 +47,9 @@ const productSchema: mongoose.Schema = new mongoose.Schema({
   caffeine: {
     type: String,
   },
+  category: {
+    type: String,
+  },
 });
 
 const Product = mongoose.model<IProductModel>("Product", productSchema);

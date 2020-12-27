@@ -43,6 +43,9 @@ const router: express.Router = express.Router();
  *       caffeine:
  *         type: "string"
  *         example: "245"
+ *       category:
+ *         type: "string"
+ *         example: "콜드브루"
  */
 /**
  * @swagger
