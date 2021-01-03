@@ -15,8 +15,11 @@ export const getProductAll = async (
       product = await Product.find({})
         .skip((+page - 1) * +size)
         .limit(+size);
+    } else if (req.query.category) {
+      const { category } = req.query;
+      product = await Product.find({ category }).limit(50);
     } else {
-      product = await Product.find({}).limit(10);
+      product = await Product.find({}).limit(50);
     }
     res.status(200).json({ product });
     // const ex = [];
