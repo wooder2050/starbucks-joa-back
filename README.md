@@ -52,9 +52,9 @@ doc 주소: http://localhost:500/docs
 
 1. GET /products
 
-- 데이터베이스에 존재하는 products의 정보를 반환합니다.(최대 10개)
+- 데이터베이스에 존재하는 products의 정보를 반환합니다.(최대 50개)
 - query를 이용한 페이징을 제공합니다.
-- size: 불러올 상품의 숫자(최대 10개), page: 해당 page
+- size: 불러올 상품의 숫자(최대 50개), page: 해당 page
 - ex) http://localhost:5000/product?size=10&page=2
   <pre>
   {
