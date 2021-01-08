@@ -22,6 +22,7 @@ export const getProductAll = async (
       product = await Product.find({}).limit(50);
     }
     res.status(200).json({ product });
+
     // const ex = [];
     // for (let i = 0; i <= 45; i++) {
     //   ex.push({
