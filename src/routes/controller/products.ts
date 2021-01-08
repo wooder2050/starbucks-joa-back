@@ -43,6 +43,7 @@ export const getProductAll = async (
     //   });
     // }
     // res.status(200).json({ product: ex });
+
   } catch (e) {
     next();
   }
